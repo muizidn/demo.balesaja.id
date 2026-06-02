@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AiWidgetCleanup from "@/components/AiWidgetCleanup";
 
 const demos = [
   {
@@ -18,6 +19,7 @@ const demos = [
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <AiWidgetCleanup />
       <section className="flex flex-col items-center justify-center px-4 py-24 text-center">
         <div className="mb-4 inline-block rounded-full bg-zinc-100 px-4 py-1.5 text-xs font-medium text-zinc-600">
           Demo Landing Pages
