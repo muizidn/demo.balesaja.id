@@ -1,7 +1,7 @@
 const packages = [
-  { name: "Paket Hemat", duration: "9 Hari", price: "Rp 24.999.000", badge: "Best Seller" },
-  { name: "Paket Reguler", duration: "12 Hari", price: "Rp 32.999.000", badge: "Populer" },
-  { name: "Paket VIP", duration: "14 Hari", price: "Rp 49.999.000", badge: "Premium" },
+  { name: "Paket Hemat", duration: "9 Hari", price: "Rp 24.999.000", badge: "Best Seller", img: "/images/umroh-1.jpg" },
+  { name: "Paket Reguler", duration: "12 Hari", price: "Rp 32.999.000", badge: "Populer", img: "/images/umroh-2.jpg" },
+  { name: "Paket VIP", duration: "14 Hari", price: "Rp 49.999.000", badge: "Premium", img: "/images/umroh-3.jpg" },
 ];
 
 const features = [
@@ -25,6 +25,7 @@ const itinerary = [
   { day: "Hari 8-9", desc: "Persiapan pulang ke Tanah Air" },
 ];
 
+import Image from "next/image";
 import Script from "next/script";
 
 export default function TravelUmroh() {
@@ -34,8 +35,9 @@ export default function TravelUmroh() {
         src="https://csai.balescepat.com/widget.js?id=e7166ede-3718-4ca7-990c-bedf87b49b2b"
         strategy="afterInteractive"
       />
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-600 px-4 py-20 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.08),transparent_60%)]" />
+      <section className="relative overflow-hidden px-4 py-20 text-white">
+        <Image src="/images/umroh-hero.jpg" alt="" fill className="absolute inset-0 object-cover" priority />
+        <div className="absolute inset-0 bg-emerald-900/70" />
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-emerald-200">Biro Perjalanan Umroh</p>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
@@ -45,7 +47,7 @@ export default function TravelUmroh() {
             Kami hadir untuk membantu perjalanan ibadah umroh Anda dengan layanan terbaik, harga transparan, dan bimbingan profesional.
           </p>
           <a
-            href="https://wa.me/6281234567890"
+            href="https://s.id/nK5CC"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 font-semibold text-emerald-700 transition-all hover:bg-emerald-50 hover:scale-105"
@@ -62,9 +64,12 @@ export default function TravelUmroh() {
           <div className="grid gap-6 sm:grid-cols-3">
             {packages.map((p) => (
               <div key={p.name} className="group relative rounded-2xl border border-zinc-200 p-6 text-center transition-all hover:shadow-lg hover:-translate-y-1">
-                <span className="absolute right-3 top-3 rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-medium text-white">
+                <span className="absolute right-3 top-3 z-10 rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-medium text-white">
                   {p.badge}
                 </span>
+                <div className="relative -mx-6 -mt-6 mb-4 h-40 overflow-hidden rounded-t-2xl">
+                  <Image src={p.img} alt={p.name} fill className="object-cover" />
+                </div>
                 <h3 className="text-lg font-semibold text-zinc-900">{p.name}</h3>
                 <p className="mt-1 text-sm text-zinc-500">{p.duration}</p>
                 <p className="mt-3 text-2xl font-bold text-emerald-600">{p.price}</p>
@@ -126,7 +131,7 @@ export default function TravelUmroh() {
         <h2 className="text-2xl font-bold">Siap Berangkat Umroh?</h2>
         <p className="mt-2 text-emerald-100">Customer Service AI kami siap membantu pendaftaran Anda</p>
         <a
-          href="https://wa.me/6281234567890"
+          href="https://s.id/nK5CC"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 font-semibold text-emerald-700 transition-all hover:bg-emerald-50"
