@@ -26,15 +26,12 @@ const itinerary = [
 ];
 
 import Image from "next/image";
-import Script from "next/script";
+import WidgetLoader from "@/components/WidgetLoader";
 
 export default function TravelUmroh() {
   return (
     <div className="flex flex-col">
-      <Script
-        src="https://csai.balescepat.com/widget.js?id=e7166ede-3718-4ca7-990c-bedf87b49b2b"
-        strategy="afterInteractive"
-      />
+      <WidgetLoader src="https://csai.balescepat.com/widget.js?id=e7166ede-3718-4ca7-990c-bedf87b49b2b" />
       <section className="relative overflow-hidden px-4 py-20 text-white">
         <Image src="/images/umroh-hero.jpg" alt="" fill className="absolute inset-0 object-cover" priority />
         <div className="absolute inset-0 bg-emerald-900/70" />

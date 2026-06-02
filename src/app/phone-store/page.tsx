@@ -19,15 +19,12 @@ const testimonials = [
 ];
 
 import Image from "next/image";
-import Script from "next/script";
+import WidgetLoader from "@/components/WidgetLoader";
 
 export default function PhoneStore() {
   return (
     <div className="flex flex-col">
-      <Script
-        src="https://csai.balescepat.com/widget.js?id=eb6effd3-27a0-4667-ac1c-0a821f3514e7"
-        strategy="afterInteractive"
-      />
+      <WidgetLoader src="https://csai.balescepat.com/widget.js?id=eb6effd3-27a0-4667-ac1c-0a821f3514e7" />
       <section className="relative overflow-hidden px-4 py-20 text-white">
         <Image src="/images/phone-hero.jpg" alt="" fill className="absolute inset-0 object-cover" priority />
         <div className="absolute inset-0 bg-blue-900/70" />
