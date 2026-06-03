@@ -14,6 +14,48 @@ const demos = [
     description: "Landing page biro perjalanan umroh dengan Customer Service AI untuk membantu pendaftaran dan informasi paket.",
     gradient: "from-emerald-500 to-teal-400",
   },
+  {
+    title: "Restaurant Booking",
+    href: "/restaurant-booking",
+    description: "Landing page restoran dengan Customer Service AI untuk membantu reservasi meja dan menampilkan menu.",
+    gradient: "from-amber-600 to-rose-600",
+  },
+  {
+    title: "Hotel Booking",
+    href: "/hotel-booking",
+    description: "Landing page hotel dengan Customer Service AI untuk membantu pemesanan kamar dan informasi fasilitas.",
+    gradient: "from-blue-900 to-indigo-800",
+  },
+  {
+    title: "School PPDB",
+    href: "/school-ppdb",
+    description: "Landing page PPDB sekolah dengan Customer Service AI untuk membantu pendaftaran siswa baru.",
+    gradient: "from-violet-600 to-indigo-700",
+  },
+  {
+    title: "Kursus Bahasa Inggris",
+    href: "/kursus-bahasa-inggris",
+    description: "Landing page kursus bahasa Inggris dengan Customer Service AI untuk membantu pendaftaran dan placement test.",
+    gradient: "from-sky-500 to-blue-600",
+  },
+  {
+    title: "Kursus Bahasa Jepang",
+    href: "/kursus-bahasa-jepang",
+    description: "Landing page kursus bahasa Jepang dengan Customer Service AI untuk membantu konsultasi level JLPT.",
+    gradient: "from-zinc-800 to-zinc-900",
+  },
+  {
+    title: "LPK Magang Luar Negeri",
+    href: "/lpk-magang",
+    description: "Landing page LPK magang ke luar negeri dengan Customer Service AI untuk membantu pendaftaran program.",
+    gradient: "from-teal-500 to-cyan-500",
+  },
+  {
+    title: "Belajar Kerja Remote",
+    href: "/belajar-kerja-remote",
+    description: "Landing page persiapan karir remote dengan Customer Service AI untuk membantu konsultasi skill digital.",
+    gradient: "from-zinc-800 to-blue-800",
+  },
 ];
 
 export default function Home() {
@@ -39,7 +81,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 pb-24 sm:flex-row">
+      <section className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 pb-24 sm:grid-cols-2 lg:grid-cols-3">
         {demos.map((demo) => (
           <Link
             key={demo.href}
